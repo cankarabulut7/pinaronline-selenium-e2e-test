@@ -60,5 +60,8 @@ Komut satırı ile Maven kullanıyorsanız:
 ```bash
 mvn test
 
+Belirli bir testi çalıştırmak için:
 
+```bash
+mvn test -Dtest=LoginTest
 
