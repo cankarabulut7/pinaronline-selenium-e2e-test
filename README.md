@@ -1,65 +1,63 @@
-# PinarOnline Otomasyon Testleri
+# PinarOnline UI Automation Tests
 
-Bu proje, PinarOnline web sitesinin çeşitli fonksiyonlarını otomatik olarak test etmek için Selenium WebDriver ve TestNG kullanılarak Java dilinde geliştirilmiş UI test otomasyon projesidir.
-
----
-
-## Test Edilen Modüller
-
-1. **LoginPage (Giriş Yapma Testleri)**  
-   - Kullanıcının telefon numarasıyla giriş yapabilmesi  
-   - OTP (Tek Kullanımlık Şifre) doğrulaması  
-   - Giriş sonrası kullanıcı profil ikonunun görünürlüğü ile doğrulama  
-
-2. **CategoryAndProductPage (Kategori ve Ürün Testleri)**  
-   - Kategori barının açılması  
-   - Rastgele kategori seçimi  
-   - Rastgele ürün seçimi  
-   - Ürün detay sayfasına yönlendirilme kontrolü  
-
-3. **BasketPage (Sepet Testleri)**  
-   - Ürün sepete ekleme  
-   - Sepete ekleme bildiriminin doğrulanması  
-   - Sepet içerisindeki ürün adet arttırma/azaltma  
-   - Sepete gidip ürünün görüntülenmesi  
-   - Sepetten ürün silme  
-
-4. **PromotionsPage (Kampanya Testleri)**  
-   - Kampanya sayfasına navigasyon  
-   - Kampanya görsellerinin yüklenme doğrulaması  
+This project is a UI test automation suite developed in Java using Selenium WebDriver and TestNG. It is designed to automatically test various functionalities of the PinarOnline website.
 
 ---
 
-## Proje Yapısı
+## Tested Modules
 
-- **`pages`**: Sayfa nesne modeli (Page Object Model) mantığıyla yazılmış, web sayfasındaki elementlerin ve fonksiyonların tanımlandığı sınıflar.  
-- **`tests`**: Test senaryolarının yer aldığı paket. TestNG framework'ü kullanılarak organize edilmiştir.  
-- **`util`**: WebDriver yönetimi gibi yardımcı fonksiyon ve sınıflar.
+1. **LoginPage (Login Tests)**  
+   - User login via phone number  
+   - OTP (One-Time Password) verification  
+   - Verifying user login via the visibility of the profile icon  
+
+2. **CategoryAndProductPage (Category & Product Tests)**  
+   - Opening the category bar  
+   - Clicking a random category  
+   - Clicking a random product  
+   - Verifying navigation to the product detail page  
+
+3. **BasketPage (Basket Tests)**  
+   - Adding a product to the basket  
+   - Verifying the basket addition notification  
+   - Increasing/decreasing product quantity in the basket  
+   - Navigating to the basket and verifying the product  
+   - Deleting the product from the basket  
+
+4. **PromotionsPage (Promotions Tests)**  
+   - Navigating to the promotions page  
+   - Verifying that the promotion images are loaded properly  
 
 ---
 
-## Kullanılan Teknolojiler ve Araçlar
+## Project Structure
+
+- **`pages`**: Contains Page Object Model (POM) classes that define web elements and page-specific actions.  
+- **`tests`**: Includes all test cases, organized using the TestNG framework.  
+- **`util`**: Utility classes such as WebDriver management.
+
+---
+
+## Technologies & Tools Used
 
 - **Java 17+**  
-- **Selenium WebDriver**  
+- **Selenium + Selenium WebDriver**  
 - **TestNG**  
-- **Maven veya Gradle** (proje bağımlılık ve yönetimi için)  
-- **Explicit Wait (WebDriverWait)** ile senkronizasyon yönetimi  
+- **Maven** (for dependency and build management)  
+- **Explicit Waits (WebDriverWait)** for synchronization  
 
 ---
 
-## Nasıl Çalıştırılır?
+## How to Run
 
-1. Projeyi GitHub veya kaynak ortamından klonlayın.  
-2. IDE içerisinde projeyi açın (IntelliJ IDEA, Eclipse vb.).  
-3. `BaseTest` sınıfında tanımlı olan temel URL (`https://testrio.pinaronline.com`) kontrol edin, gerekirse değiştirin.  
-4. Test sınıflarını test framework'ünüzden (TestNG) çalıştırın.
+1. Clone the project from GitHub or your source repository.  
+2. Open the project in your preferred IDE (e.g., IntelliJ IDEA, Eclipse).   
+3. Run test classes using your test runner (TestNG).
 
-Komut satırı ile Maven kullanıyorsanız:
+To run with Maven:
 
 ```bash
 mvn test
 
-Belirli bir testi çalıştırmak için:
-
+To run a specific test class:
 mvn test -Dtest=LoginTest
