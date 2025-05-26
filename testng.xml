@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Testrio Full Test Suite" parallel="false">
+    <test name="Testrio Test Classes">
+        <classes>
+            <class name="com.pinaronline.tests.LoginTest" />
+            <class name="com.pinaronline.tests.CategoryAndProductTest" />
+            <class name="com.pinaronline.tests.PromotionsTest" />
+            <class name="com.pinaronline.tests.GuestCheckoutTest" />
+        </classes>
+    </test>
+</suite>
